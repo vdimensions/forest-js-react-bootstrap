@@ -6,3 +6,4 @@ jest.config.json
 tsconfig.json
 .appveyor.yml
 .travis.yml
+**/*.sh
