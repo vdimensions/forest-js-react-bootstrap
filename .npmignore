@@ -1,0 +1,8 @@
+src/
+test/
+node_modules/
+README.md
+jest.config.json
+tsconfig.json
+.appveyor.yml
+.travis.yml
