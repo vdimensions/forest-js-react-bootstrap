@@ -6,9 +6,9 @@ import { NavigationNode } from '../NavigationNode';
 export default ForestView("BreadcrumbsMenuNavigableItem", (navItem: NavigationNode) => {
     const text = navItem.title || navItem.path;
     let navigateCommand = useCommand("Navigate");
-    var path = navigateCommand.path || navItem.path;
+    let path = navigateCommand.path || navItem.path;
     return (
-        <Breadcrumb.Item 
+        <Breadcrumb.Item
             href={`/${path}`}
             onClick={ (e: any) => { e.preventDefault(); navigateCommand && navigateCommand.invoke(null); } }
             >

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
-import { Region, ForestView, useCommand } from '@vdimensions/forest-js-react';
+import {Modal} from 'react-bootstrap';
+import {Region, ForestView, useCommand} from '@vdimensions/forest-js-react';
+import {CommandButton} from "../CommandButton";
 
 export default ForestView("ConfirmationDialogFrame", () => {
     let confirmCommand = useCommand("Confirm");
@@ -16,8 +17,8 @@ export default ForestView("ConfirmationDialogFrame", () => {
             </Modal.Body>
 
             <Modal.Footer>
-                {closeCommand && <Button variant="secondary" onClick={(_) => { closeCommand && closeCommand.invoke(null); }}>Close</Button>}
-                {confirmCommand && <Button variant="primary" onClick={(_) => { confirmCommand && confirmCommand.invoke(null); }}>Confirm</Button>}
+                {closeCommand && <CommandButton command={closeCommand} arg={null}>Close</CommandButton>}
+                {confirmCommand && <CommandButton variant="primary" command={confirmCommand} arg={null}>Confirm</CommandButton>}
             </Modal.Footer>
         </Modal>
     );

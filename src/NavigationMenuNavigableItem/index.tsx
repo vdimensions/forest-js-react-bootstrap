@@ -6,10 +6,10 @@ import { ForestView, useCommand } from '@vdimensions/forest-js-react';
 export default ForestView("NavigationMenuNavigableItem", (navItem: NavigationNode) => {
     let text = navItem.title || navItem.path;
     let navigateCommand = useCommand("Navigate");
-    var path = navigateCommand.path || navItem.path;
+    let path = navigateCommand.path || navItem.path;
     return (
         <Nav.Item as="li">
-            <Nav.Link 
+            <Nav.Link
                 href={`/${path}`}
                 onClick={(e : any) => { e.preventDefault(); navigateCommand && navigateCommand.invoke(null); return false; } }
                 disabled={navItem.selected}

@@ -1,3 +1,4 @@
+import React from "react";
 import BreadcrumbsMenu from './BreadcrumbsMenu';
 import BreadcrumbsMenuItem from './BreadcrumbsMenuItem';
 import BreadcrumbsMenuNavigableItem from './BreadcrumbsMenuNavigableItem';
@@ -12,5 +13,7 @@ let views : React.FC<any>[] = [
   NavigationMenu, NavigationMenuItem, NavigationMenuNavigableItem,
   BreadcrumbsMenu, BreadcrumbsMenuItem, BreadcrumbsMenuNavigableItem
 ];
+
+export {CommandButton} from "./CommandButton";
 
 export default views;
