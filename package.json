@@ -1,6 +1,6 @@
 {
   "name": "@vdimensions/forest-js-react-bootstrap",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Forest UI implementations using react-bootstrap",
   "author": "Virtual Dimensions",
   "license": "Apache-2.0",
@@ -64,8 +64,8 @@
     "dist"
   ],
   "dependencies": {
-    "@vdimensions/forest-js-frontend": "^1.2.4",
-    "@vdimensions/forest-js-react": "^1.2.8",
+    "@vdimensions/forest-js-frontend": "^1.2.9",
+    "@vdimensions/forest-js-react": "^1.2.9",
     "react-bootstrap": "^1.4.3"
   }
 }
