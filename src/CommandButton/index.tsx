@@ -2,9 +2,10 @@ import React, { FC } from "react";
 import {Button} from "react-bootstrap";
 import {ButtonVariant} from "react-bootstrap/types";
 import {ButtonType} from "react-bootstrap/Button";
+import {ForestReactCommand} from "@vdimensions/forest-js-react";
 
 interface Props {
-    command: any, // TODO: use ForestReactCommand type
+    command: ForestReactCommand,
     arg?: any,
     active?: boolean;
     block?: boolean;

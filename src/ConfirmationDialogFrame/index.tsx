@@ -17,7 +17,7 @@ export default ForestView("ConfirmationDialogFrame", () => {
             </Modal.Body>
 
             <Modal.Footer>
-                {closeCommand && <CommandButton command={closeCommand} arg={null}>Close</CommandButton>}
+                {closeCommand && <CommandButton variant="secondary" command={closeCommand} arg={null}>Close</CommandButton>}
                 {confirmCommand && <CommandButton variant="primary" command={confirmCommand} arg={null}>Confirm</CommandButton>}
             </Modal.Footer>
         </Modal>
