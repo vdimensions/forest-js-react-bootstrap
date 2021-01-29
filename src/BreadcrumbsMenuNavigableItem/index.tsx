@@ -4,13 +4,14 @@ import { ForestView, useCommand } from '@vdimensions/forest-js-react';
 import { NavigationNode } from '../NavigationNode';
 
 export default ForestView("BreadcrumbsMenuNavigableItem", (navItem: NavigationNode) => {
-    const text = navItem.title || navItem.path;
-    let navigateCommand = useCommand("Navigate");
-    let path = navigateCommand.path || navItem.path;
+    const navigateCommand = useCommand("Navigate");
+    const href = navigateCommand.path ? `/${navigateCommand.path}` : undefined;
+    const text = navItem.title || navigateCommand.displayName;
     return (
         <Breadcrumb.Item
-            href={`/${path}`}
-            onClick={ (e: any) => { e.preventDefault(); navigateCommand && navigateCommand.invoke(null); } }
+            href={href}
+            onClick={ href ? undefined : (e: any) => { e.preventDefault(); navigateCommand && navigateCommand.invoke(null); } }
+            active={navItem.selected}
             >
             {text}
         </Breadcrumb.Item>
