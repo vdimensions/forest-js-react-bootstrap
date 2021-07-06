@@ -10,7 +10,7 @@ export default ForestView("BreadcrumbsMenuNavigableItem", (navItem: NavigationNo
     return (
         <Breadcrumb.Item
             href={href}
-            onClick={ href ? undefined : (e: any) => { e.preventDefault(); navigateCommand && navigateCommand.invoke(null); } }
+            onClick={ (e: any) => { e.preventDefault(); navigateCommand && navigateCommand.invoke(null); } }
             active={navItem.selected}
             >
             {text}

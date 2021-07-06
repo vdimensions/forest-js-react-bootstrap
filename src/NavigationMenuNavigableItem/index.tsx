@@ -11,7 +11,7 @@ export default ForestView("NavigationMenuNavigableItem", (navItem: NavigationNod
         <Nav.Item as="li">
             <Nav.Link
                 href={href}
-                onClick={ href ? undefined : (e : any) => { e.preventDefault(); navigateCommand && navigateCommand.invoke(null); return false; } }
+                onClick={ (e : any) => { e.preventDefault(); navigateCommand && navigateCommand.invoke(null); return false; } }
                 disabled={navItem.selected}
                 >
                 {text}
