@@ -22,7 +22,7 @@ export const CommandButton : FC<Props> = (props) => {
         <Button
             type="button"
             {...props}
-            href={command.path && `/${command.path}`}
+            href={(!arg && command.path) ? `/${command.path}` : undefined}
             onClick={ (e: any) => { e.preventDefault(); command && command.invoke(arg); } }
             >
             {content}
