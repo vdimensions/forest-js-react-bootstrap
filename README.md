@@ -27,4 +27,4 @@ class Example extends Component {
 
 ## License
 
-Apache-2.0 © [vdimensions](https://github.com/vdimensions)
+Apache-2.0 © [vdimensions](https://gitlab.com/vdimensions)

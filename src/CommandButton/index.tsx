@@ -17,13 +17,18 @@ interface Props {
 
 export const CommandButton : FC<Props> = (props) => {
     const {command, arg, children} = props;
-    const content = children || command.name;
+    const content = children || (command.displayName || command.name);
+    const {active, block, disabled, size, type, variant} = props;
     return (
         <Button
-            type="button"
-            {...props}
+            type={type || "button"}
+            active={active}
+            block={block}
+            variant={variant}
+            size={size}
+            disabled={disabled}
             href={(!arg && command.path) ? `/${command.path}` : undefined}
-            onClick={ (e: any) => { e.preventDefault(); command && command.invoke(arg); } }
+            onClick={ (e: any) => { e.preventDefault(); command && command.invoke(arg || null); } }
             >
             {content}
         </Button>

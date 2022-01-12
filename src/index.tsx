@@ -9,9 +9,9 @@ import NavigationMenuItem from "./NavigationMenuItem";
 import NavigationMenuNavigableItem from "./NavigationMenuNavigableItem";
 
 let views : React.FC<any>[] = [
-  DialogSystem, ConfirmationDialogFrame,
-  NavigationMenu, NavigationMenuItem, NavigationMenuNavigableItem,
-  BreadcrumbsMenu, BreadcrumbsMenuItem, BreadcrumbsMenuNavigableItem
+    DialogSystem, ConfirmationDialogFrame,
+    NavigationMenu, NavigationMenuItem, NavigationMenuNavigableItem,
+    BreadcrumbsMenu, BreadcrumbsMenuItem, BreadcrumbsMenuNavigableItem
 ];
 
 export {CommandButton} from "./CommandButton";
