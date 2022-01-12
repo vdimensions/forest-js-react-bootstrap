@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/vdimensions/frameworks/forest/forest-js-react-bootstrap.git "
+    "url": "git+https://github.com/vdimensions/forest-js-react-bootstrap.git"
   },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
