@@ -1,14 +1,14 @@
 import React, { FC } from "react";
 import {Button} from "react-bootstrap";
 import {ButtonVariant} from "react-bootstrap/types";
-import {ButtonType} from "react-bootstrap/Button";
 import {ForestReactCommand} from "@vdimensions/forest-js-react";
+
+type ButtonType = "button" | "submit" | "reset" | undefined;
 
 interface Props {
     command: ForestReactCommand,
     arg?: any,
     active?: boolean;
-    block?: boolean;
     variant?: ButtonVariant;
     size?: 'sm' | 'lg';
     type?: ButtonType;
@@ -18,12 +18,11 @@ interface Props {
 export const CommandButton : FC<Props> = (props) => {
     const {command, arg, children} = props;
     const content = children || (command.displayName || command.name);
-    const {active, block, disabled, size, type, variant} = props;
+    const {active, disabled, size, type, variant} = props;
     return (
         <Button
             type={type || "button"}
             active={active}
-            block={block}
             variant={variant}
             size={size}
             disabled={disabled}
