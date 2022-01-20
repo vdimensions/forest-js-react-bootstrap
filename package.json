@@ -66,6 +66,6 @@
   "dependencies": {
     "@vdimensions/forest-js-frontend": "^1.2.13",
     "@vdimensions/forest-js-react": "^1.2.23",
-    "react-bootstrap": "^1.6.4"
+    "react-bootstrap": "^2.1.1"
   }
 }
