@@ -15,5 +15,6 @@ let views : React.FC<any>[] = [
 ];
 
 export {CommandButton} from "./CommandButton";
+export type {FormField, FormValidationRule, FormValidationState} from "./FormField";
 
 export default views;

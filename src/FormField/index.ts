@@ -28,5 +28,3 @@ export type FormField<T> = {
     value: T;
     validation: FormValidationState<T>;
 }
-
-const f: FormValidationState<number> = { };
